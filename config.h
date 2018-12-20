@@ -88,42 +88,39 @@ unsigned int alpha = 0xcc;
 /* Terminal colors (16 first used in escape sequence) */
 static const char *colorname[] = {
 	/* 8 normal colors */
-	"black",
-	"red3",
-	"green3",
-	"yellow3",
-	"blue2",
-	"magenta3",
-	"cyan3",
-	"gray90",
+	[0] = "#0f0e0d",
+	[1] = "#845336",
+	[2] = "#57553c",
+	[3] = "#a17e3e",
+	[4] = "#43454f",
+	[5] = "#604848",
+	[6] = "#5c6652",
+	[7] = "#a18b62",
 
 	/* 8 bright colors */
-	"gray50",
-	"red",
-	"green",
-	"yellow",
-	"#5c5cff",
-	"magenta",
-	"cyan",
-	"white",
+	[8] = "#383332",
+	[9] = "#8c4f4a",
+	[10]= "#898471",
+	[11]= "#c8b491",
+	[12]= "#65788f",
+	[13]= "#755e4a",
+	[14]= "#718062",
+	[15]= "#bc9d66",
 
-	[255] = 0,
-
-	/* more colors can be added after 255 to use with DefaultXX */
-	"#cccccc",
-	"#555555",
+	[256] = "#191716",
+	[257] = "#daba8b"
 };
-
 
 /*
  * Default colors (colorname index)
  * foreground, background, cursor, reverse cursor
  */
-unsigned int defaultfg = 7;
-unsigned int defaultbg = 0;
-static unsigned int defaultcs = 256;
+unsigned int defaultfg = 257;
+unsigned int defaultbg = 256;
+static unsigned int defaultcs = 257;
 static unsigned int defaultrcs = 257;
-
+static unsigned int defaultitalic = 7;
+static unsigned int defaultunderline = 7;
 /*
  * Default shape of cursor
  * 2: Block ("█")
