@@ -86,30 +86,31 @@ unsigned int tabspaces = 8;
 unsigned int alpha = 0xcc;
 
 /* Terminal colors (16 first used in escape sequence) */
-static const char *colorname[] = {
-	/* 8 normal colors */
-	[0] = "#202020", /* black   */
-	[1] = "#b91e2e", /* red     */
-	[2] = "#81957c", /* green   */
-	[3] = "#f9bb80", /* yellow  */ 
-	[4] = "#356579", /* blue    */ 
-	[5] = "#c344ea", /* magenta */ 
-	[6] = "#0d6fb7", /* cyan    */ 
-	[7] = "#909090", /* white   */ 
+/* #include "/home/halim/.cache/wal/colors-wal-st.h" */
+static const char *colorname[] = { 
+ /* 8 normal colors */
+   [0] = "#0A0C0F", /* black   */
+   [1] = "#2D6595", /* red     */
+   [2] = "#5D6098", /* green   */
+   [3] = "#697DC2", /* yellow  */
+   [4] = "#9D6494", /* blue    */
+   [5] = "#D86E8D", /* magenta */
+   [6] = "#4595BF", /* cyan    */
+   [7] = "#a5c9e0", /* white   */
+ 
+   /* 8 bright colors */
+   [8]  = "#738c9c",  /* black   */
+   [9]  = "#2D6595",  /* red     */
+   [10] = "#5D6098", /* green   */
+   [11] = "#697DC2", /* yellow  */
+   [12] = "#9D6494", /* blue    */
+   [13] = "#D86E8D", /* magenta */
+   [14] = "#4595BF", /* cyan    */
+   [15] = "#a5c9e0", /* white   */
 
-	/* 8 bright colors */
-	[8] = "#606060", /* black   */ 
-	[9] = "#d14548", /* red     */ 
-	[10]= "#a7b79a", /* green   */ 
-	[11]= "#fae3a0", /* yellow  */ 
-	[12]= "#7491a1", /* blue    */ 
-	[13]= "#87314e", /* magenta */ 
-	[14]= "#0f829d", /* cyan    */ 
-	[15]= "#fff0f0", /* white   */ 
-
-	[256] = "#000000", /* background */ 
-	[257] = "#d2c5bc", /* foreground */  
-};
+	[256] = "#0A0C0F", /* background */ 
+	[257] = "#a5c9e0", /* foreground */  
+}; 
 
 /*
  * Default colors (colorname index)
@@ -118,9 +119,9 @@ static const char *colorname[] = {
 unsigned int defaultfg = 257;
 unsigned int defaultbg = 256;
 static unsigned int defaultcs = 257;
-static unsigned int defaultrcs = 257;
+static unsigned int defaultrcs = 257; 
 static unsigned int defaultitalic = 7;
-static unsigned int defaultunderline = 7;
+static unsigned int defaultunderline = 7; 
 /*
  * Default shape of cursor
  * 2: Block ("█")
