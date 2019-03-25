@@ -5,7 +5,7 @@
  *
  * font: see http://freedesktop.org/software/fontconfig/fontconfig-user.html
  */
-static char *font = "SourceCodePro:pixelsize=13:antialias=true:autohint=true";
+static char *font = "SFMono:pixelsize=12:antialias=true:autohint=true";
 static int borderpx = 2;
 
 /*
@@ -86,32 +86,32 @@ unsigned int tabspaces = 8;
 unsigned int alpha = 0xcc;
 
 /* Terminal colors (16 first used in escape sequence) */
-/* #include "/home/halim/.cache/wal/colors-wal-st.h" */
 static const char *colorname[] = { 
- /* 8 normal colors */
-   [0] = "#0A0C0F", /* black   */
-   [1] = "#2D6595", /* red     */
-   [2] = "#5D6098", /* green   */
-   [3] = "#697DC2", /* yellow  */
-   [4] = "#9D6494", /* blue    */
-   [5] = "#D86E8D", /* magenta */
-   [6] = "#4595BF", /* cyan    */
-   [7] = "#a5c9e0", /* white   */
- 
-   /* 8 bright colors */
-   [8]  = "#738c9c",  /* black   */
-   [9]  = "#2D6595",  /* red     */
-   [10] = "#5D6098", /* green   */
-   [11] = "#697DC2", /* yellow  */
-   [12] = "#9D6494", /* blue    */
-   [13] = "#D86E8D", /* magenta */
-   [14] = "#4595BF", /* cyan    */
-   [15] = "#a5c9e0", /* white   */
+  /* 8 normal colors */
+ [0] = "#011316", /* black   */
+ [1] = "#064D6F", /* red     */
+ [2] = "#139363", /* green   */
+ [3] = "#013E84", /* yellow  */
+ [4] = "#07619C", /* blue    */
+ [5] = "#0673CC", /* magenta */
+ [6] = "#149DDD", /* cyan    */
+ [7] = "#93d8e5", /* white   */
 
-	[256] = "#0A0C0F", /* background */ 
-	[257] = "#a5c9e0", /* foreground */  
-}; 
+ /* 8 bright colors */
+ [8]  = "#6697a0",  /* black   */
+ [9]  = "#064D6F",  /* red     */
+ [10] = "#139363", /* green   */
+ [11] = "#013E84", /* yellow  */
+ [12] = "#07619C", /* blue    */
+ [13] = "#0673CC", /* magenta */
+ [14] = "#149DDD", /* cyan    */
+ [15] = "#93d8e5", /* white   */
 
+ /* special colors */
+ [256] = "#011316", /* background */
+ [257] = "#93d8e5", /* foreground */
+ [258] = "#93d8e5",     /* cursor */ 
+};
 /*
  * Default colors (colorname index)
  * foreground, background, cursor, reverse cursor
